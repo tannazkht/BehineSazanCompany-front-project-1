@@ -1,0 +1,72 @@
+// @import "";
+
+// @font-face {
+//     font-family: ;
+//     src: url();
+// }
+
+@mixin flex-manager($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    body {
+        margin: 0;
+        padding: 0;
+        direction: ltr;
+        .intro {
+            width: 100%;
+            height: 600px;
+            // margin-top: 0;
+            background-image: url(../assets/images/header-bg.jpg);
+            background-position: fixed;
+            background-size: cover;
+            border-bottom-left-radius: 115px;
+            border-bottom-right-radius: 115px;
+            .navbar {
+                @include flex-manager(row, space-between, center);
+                // margin-top: 10px;
+                font-size: 14px;
+                .left-options {
+                    ul {
+                        list-style-type: none;
+                        @include flex-manager(row, unset, center);
+                        li {
+                            a {
+                                text-decoration: none;
+                                padding: 8px;
+                                color: rgba(251, 251, 251, 0.607);
+                            }
+                            .site-logo {
+                                width: 40px;
+                                height: auto;  
+                            }
+                        }
+                    }
+                }
+                .right-options {
+                    // @include flex-manager(row, unset, center);
+                    margin-right: 5%;
+                    a {
+                        text-decoration: none;
+                        color: #ffffff;
+                        padding: 8px;
+                    }
+                    .signin-button {
+                        border: 1px solid #ffffff;
+                        border-radius: 30px;
+                        padding: 5px 11px;
+                    }
+                }
+            }
+        }
+    }
+}
