@@ -54,4 +54,34 @@ html body .intro .navbar .right-options .signin-button {
   border: 1px solid #ffffff;
   border-radius: 30px;
   padding: 5px 11px;
+}
+html body .intro .intro-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+html body .intro .intro-detail .intro-detail-elements {
+  margin: 11px;
+}
+html body .intro .intro-detail h1 {
+  color: #ffffff;
+  font-size: 61px;
+  text-align: center;
+  word-spacing: 3px;
+  margin-top: 50px;
+}
+html body .intro .intro-detail p {
+  color: #ffffff;
+  text-align: center;
+}
+html body .intro .intro-detail a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #E76F51;
+  border: 1px solid #E76F51;
+  border-radius: 30px;
+  padding: 5px 28px;
 }/*# sourceMappingURL=style.css.map */
