@@ -1,3 +1,11 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../assets/fonts/Roboto/Roboto-Black.ttf);
+}
+@font-face {
+  font-family: Archivo;
+  src: url(../assets/fonts/Archivo/Archivo-Black.ttf);
+}
 * {
   box-sizing: border-box;
 }
@@ -9,12 +17,12 @@ html body {
   margin: 0;
   padding: 0;
   direction: ltr;
+  font-family: Roboto;
 }
 html body .intro {
   width: 100%;
   height: 600px;
   background-image: url(../assets/images/header-bg.jpg);
-  background-position: fixed;
   background-size: cover;
   border-bottom-left-radius: 115px;
   border-bottom-right-radius: 115px;
@@ -25,6 +33,26 @@ html body .intro .navbar {
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
+}
+html body .intro .navbar .logo-responsive {
+  display: none;
+  width: 25px;
+  height: auto;
+}
+html body .intro .navbar .hamberger-menu {
+  display: none;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  border-radius: 35%;
+  padding: 7px 10px;
+}
+html body .intro .navbar .hamberger-menu .menu-responsive img {
+  width: 17px;
+  height: auto;
+}
+html body .intro .navbar .left-options .site-logo {
+  width: 40px;
+  height: auto;
 }
 html body .intro .navbar .left-options ul {
   list-style-type: none;
@@ -37,10 +65,6 @@ html body .intro .navbar .left-options ul li a {
   text-decoration: none;
   padding: 8px;
   color: rgba(251, 251, 251, 0.607);
-}
-html body .intro .navbar .left-options ul li .site-logo {
-  width: 40px;
-  height: auto;
 }
 html body .intro .navbar .right-options {
   margin-right: 5%;
@@ -84,4 +108,28 @@ html body .intro .intro-detail a {
   border: 1px solid #E76F51;
   border-radius: 30px;
   padding: 5px 28px;
+}
+
+@media only screen and (min-width: 324px) and (max-width: 775px) {
+  html body .intro .navbar .logo-responsive {
+    display: block;
+    margin-left: 11px;
+  }
+  html body .intro .navbar .hamberger-menu {
+    display: block;
+    margin-left: 76%;
+    margin-right: 5px;
+  }
+  html body .intro .navbar .left-options ul li {
+    display: none;
+  }
+  html body .intro .navbar .right-options {
+    display: none;
+  }
+  html body .intro .intro-detail h1 {
+    font-size: 38px;
+  }
+  html body .intro .intro-detail p {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */

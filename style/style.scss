@@ -1,9 +1,13 @@
 // @import "";
 
-// @font-face {
-//     font-family: ;
-//     src: url();
-// }
+@font-face {
+    font-family: Roboto;
+    src: url(../assets/fonts/Roboto/Roboto-Black.ttf);
+}
+@font-face {
+    font-family: Archivo;
+    src: url(../assets/fonts/Archivo/Archivo-Black.ttf);
+}
 
 @mixin flex-manager($direction, $justify, $align) {
     display: flex;
@@ -22,12 +26,13 @@ html {
         margin: 0;
         padding: 0;
         direction: ltr;
+        font-family: Roboto;
         .intro {
             width: 100%;
             height: 600px;
             // margin-top: 0;
             background-image: url(../assets/images/header-bg.jpg);
-            background-position: fixed;
+            // background-position: fixed;
             background-size: cover;
             border-bottom-left-radius: 115px;
             border-bottom-right-radius: 115px;
@@ -35,7 +40,29 @@ html {
                 @include flex-manager(row, space-between, center);
                 // margin-top: 10px;
                 font-size: 14px;
+                .logo-responsive {
+                    display: none;
+                    width: 25px;
+                    height: auto; 
+                }
+                .hamberger-menu {
+                    display: none;
+                    border: 1px solid #ffffff;
+                    background-color: #ffffff;
+                    border-radius: 35%; 
+                    padding: 7px 10px;
+                    .menu-responsive {
+                        img {
+                            width: 17px;
+                            height: auto;
+                        }
+                    }
+                }
                 .left-options {
+                    .site-logo {
+                        width: 40px;
+                        height: auto;  
+                    }
                     ul {
                         list-style-type: none;
                         @include flex-manager(row, unset, center);
@@ -44,10 +71,6 @@ html {
                                 text-decoration: none;
                                 padding: 8px;
                                 color: rgba(251, 251, 251, 0.607);
-                            }
-                            .site-logo {
-                                width: 40px;
-                                height: auto;  
                             }
                         }
                     }
@@ -106,3 +129,48 @@ html {
 //today: 1403.03.30 - wed .
 //continue: develope "section 1" responsive;
 // Thanks God . really ..  ;-)
+
+
+//mobile responsive: 
+@media only screen and (min-width: 324px) and (max-width: 775px) {
+    
+    html {
+        body {
+            .intro {
+                .navbar {
+                    // @include flex-manager(row, space-between, center);
+                    .logo-responsive {
+                        display: block;
+                        margin-left: 11px;
+                    }
+                    .hamberger-menu {
+                        display: block;
+                        margin-left: 76%;
+                        margin-right: 5px;
+                    }
+                    .left-options {
+                        ul {
+                            li {
+                                display: none;
+                            }
+                        }
+                    }
+                    .right-options {
+                        display: none;
+                    }
+                }
+                .intro-detail {
+                    h1 {
+                        font-size: 38px;
+                    }
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+}
